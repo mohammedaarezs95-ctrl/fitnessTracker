@@ -1,11 +1,10 @@
 //create a advanced fitness tracker api with endpoints POST /api/workouts to add date exercise duration(in minutes) calories burned, GET /api/workouts to get all workouts as a JSON array, PUT /api/workouts/:id to update duration calories burned exercise, DELETE /api/workouts/:id to delete workout
 require('dotenv').config();
 const express = require('express');
-const workout = require('workout');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(workout.json());
+app.use(express.json());
 
 let workouts = [];
 let currentId = 1;
